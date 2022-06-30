@@ -13,4 +13,12 @@ describe("Counter testing", () => {
     const wrapper = shallow(<App />);
     expect(wrapper.find("h1").text()).toContain("This is counter App");
   })
+
+  it("Should render button text of Increment",()=>{
+    const wrapper = shallow(<App />);
+
+    const wrapperValue = wrapper.find("#increment-btn").text();
+
+    expect(wrapperValue).toBe("Increment");
+  })
 })
