@@ -47,4 +47,13 @@ describe("Counter testing", () => {
 
     expect(wrapperValue).toBe("0");
   });
+
+  it('Should render counter value zero if decremented below zero', () => {
+    wrapper.find("#decrement-btn").simulate('click');//clicks the decrement button
+
+    const wrapperValue = wrapper.find("#counter-value").text();
+
+    expect(wrapperValue).toBe("0");
+  });
+
 })
