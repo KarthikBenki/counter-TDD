@@ -25,6 +25,8 @@ describe("Counter testing", () => {
   })
 
   it("Should render the initial value of state in div",()=>{
-
+    const wrapperValue = wrapper.find("#counter-value").text();
+    
+    expect(wrapperValue).toBe("0");
   })
 })

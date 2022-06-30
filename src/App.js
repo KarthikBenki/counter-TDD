@@ -1,12 +1,15 @@
 import React from "react";
+import { useState } from "react";
 import "./App.css";
 
 
 function App() {
+  const [counter, setCounter] = useState(0)
   return (
     <div className="App">
         <h1>This is counter App</h1>
-        <button id="increment-btn">Increment</button>
+        <div id="counter-value">{counter}</div>
+        <button id="increment-btn">Increment</button> 
     </div>
   );
 }
