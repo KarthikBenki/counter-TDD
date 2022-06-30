@@ -9,16 +9,22 @@ configure({ adapter: new Adapter() });
 
 
 describe("Counter testing", () => {
+  let wrapper;
+  beforeEach(()=>{
+    wrapper = shallow(<App />);
+  })
+
   it("should render the title of the counter", () => {
-    const wrapper = shallow(<App />);
     expect(wrapper.find("h1").text()).toContain("This is counter App");
   })
 
   it("Should render button text of Increment",()=>{
-    const wrapper = shallow(<App />);
-
     const wrapperValue = wrapper.find("#increment-btn").text();
 
     expect(wrapperValue).toBe("Increment");
+  })
+
+  it("Should render the initial value of state in div",()=>{
+
   })
 })
