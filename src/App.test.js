@@ -6,7 +6,7 @@ import Counter from "./components/Counter";
 describe("Counter testing", () => {
   let wrapper;
   beforeEach(() => {
-    wrapper = shallow(<Counter />);
+    wrapper = mount(<App />);
   });
 
   it("should render the title of the counter", () => {
